@@ -1,0 +1,31 @@
+<% if @comp_move == "rock"
+    @outcome = "won!"
+  elsif @comp_move == "paper"
+    @outcome = "tied"
+  else 
+    @outcome = "lost"
+  end %>
+
+<h2>
+    We played paper!
+</h2>
+
+<h2>
+  They played <%=@comp_move%>!
+</h2>
+
+<% if @outcome == "won" %>
+  <h2 style="color: green">
+    We <%=@outcome%>!
+  </h2>
+<% elsif @outcome == "lost" %>
+  <h2 style="color: red">
+    We <%=@outcome%>!
+  </h2>
+<% else %>
+  <h2 style="color: black">
+    We <%=@outcome%>!
+  </h2>
+<% end %>
+
+<a href = "/">Rules</a>
